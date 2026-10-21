@@ -53,6 +53,11 @@ footer{margin-top:28px;color:var(--mute);font-size:.85rem}
 <main>
 <h1>Chennai waterlogging dashboard</h1>
 <p class="sub">Community reports update live; official feeds are linked below. Last compiled 21 October 2026.</p>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px">
+<button id="rf" type="button" style="padding:8px 14px;font-weight:700">Refresh reports</button>
+<button id="ask" type="button" style="padding:8px 14px;font-weight:700">Request full data refresh</button>
+<span id="rfm" class="meta" role="status">Reports refreshed when you open the page.</span>
+</div>
 <p class="note"><b>What is live here:</b> the Community reports section updates for everyone who has it open. X, Instagram and YouTube block embedding, so those feeds open in a new tab. The timeline below is a dated snapshot (latest verified: 18–19 Oct).</p>
 
 <h2>Warnings to residents</h2>
@@ -167,6 +172,18 @@ $("f").addEventListener("submit",async function(ev){
   $("f").reset();say("Posted.");
  }catch(e){say("Couldn’t post: "+((e&&e.message)||"try again"))}
  $("go").disabled=false;
+});
+$("rf").addEventListener("click",async function(){
+ var m=$("rfm");
+ if(!db){m.textContent="Reports need a signed-in viewer.";return}
+ m.textContent="Refreshing…";
+ try{var s=await db.collection("reports").get();show(s.docs.map(function(x){return x.data()}));m.textContent="Reports refreshed at "+new Date().toLocaleTimeString("en-IN",{timeStyle:"short"})+". Official data below is from 21 Oct."}
+ catch(e){m.textContent="Couldn’t refresh reports."}
+});
+$("ask").addEventListener("click",async function(){
+ var t="Refresh my Chennai waterlogging dashboard (https://claude.ai/artifact/9CEQ5mX5hhr7TvBksSS3Fo) with the latest posts, warnings, rainfall and subway status, newest first.",m=$("rfm");
+ try{await navigator.clipboard.writeText(t);m.textContent="Copied. Paste it into your Claude chat; only Claude chat can search for new data."}
+ catch(e){m.textContent="Copy this into your Claude chat: "+t}
 });
 })();
 </script>
