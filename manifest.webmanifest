@@ -1,0 +1,15 @@
+{
+  "name": "Chennai Waterlogging Dashboard",
+  "short_name": "Chennai Rain",
+  "description": "Chennai waterlogging warnings, flooded roads, subways and rainfall.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eef3f4",
+  "theme_color": "#0b6e7f",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
