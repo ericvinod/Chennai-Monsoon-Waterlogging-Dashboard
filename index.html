@@ -34,4 +34,166 @@ a{color:var(--water);font-weight:600}
 a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 .tl{list-style:none;margin:0;padding:0;border-left:3px solid var(--water)}
 .tl li{background:var(--surf);border:1px solid var(--line);border-radius:6px;margin:0 0 10px 14px;padding:10px 14px;position:relative}
-.tl li::before{content:"";position:absolute;left:-23px;top:16px;width:11px;height:11px;border-radius:
+.tl li::before{content:"";position:absolute;left:-23px;top:16px;width:11px;height:11px;border-radius:50%;background:var(--water);border:2px solid var(--bg)}
+.meta{color:var(--mute);font-size:.85rem}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:99px;border:1px solid currentColor;margin-right:6px}
+.t-x{color:var(--water)}.t-n{color:var(--amber)}.t-w{color:var(--warn)}
+.bars{display:grid;gap:6px}
+.bar{display:grid;grid-template-columns:110px 1fr 56px;gap:8px;align-items:center;font-size:.92rem}
+.bar i{display:block;height:14px;background:var(--water);border-radius:3px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--surf);border:1px solid var(--line);font-size:.93rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.st-ok{color:var(--ok);font-weight:700}.st-bad{color:var(--warn);font-weight:700}
+footer{margin-top:28px;color:var(--mute);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Chennai waterlogging dashboard</h1>
+<p class="sub">Community reports update live; official feeds are linked below. Last compiled 22 October 2026.</p>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px">
+<button id="rf" type="button" style="padding:8px 14px;font-weight:700">Refresh reports</button>
+<button id="ask" type="button" style="padding:8px 14px;font-weight:700">Request full data refresh</button>
+<span id="rfm" class="meta" role="status">Reports refreshed when you open the page.</span>
+</div>
+<p class="note"><b>What is live here:</b> the Community reports section updates for everyone who has it open. X, Instagram and YouTube block embedding, so those feeds open in a new tab. The timeline below is a dated snapshot (latest verified: 21 Oct).</p>
+
+<h2>Warnings to residents</h2>
+<div class="warns" role="alert">
+<div class="warn"><span class="dot"></span><div><b>Stay out of flooded areas and away from riverbanks.</b> Don’t go to film videos or sightsee.<small>Public Works Minister, 18 Oct 2026</small></div></div>
+<div class="warn"><span class="dot"></span><div><b>Power may be cut in severely inundated areas</b> as a precaution.<small>Public Works Minister, 18 Oct 2026</small></div></div>
+<div class="warn"><span class="dot"></span><div><b>Old or unsafe buildings in North Chennai:</b> move to government relief centres, especially 60-year-old Tamil Nadu Housing Board blocks.<small>Public Works Minister, 18 Oct 2026</small></div></div>
+<div class="warn"><span class="dot"></span><div><b>Schools closed on 21 Oct in Chennai, Tiruvallur, Kancheepuram, Chengalpattu and Ranipet.</b> Check your district’s notice for today.<small>Bombay Samachar, 21 Oct 2026</small></div></div>
+<div class="warn"><span class="dot"></span><div><b>Avoid water bodies and take care near electrical installations.</b> 200 relief centres are ready.<small>Greater Chennai Corporation via Bombay Samachar, 21 Oct 2026</small></div></div>
+<div class="warn"><span class="dot"></span><div><b>The earlier IMD warning (heavy to very heavy rain until 21 Oct) has lapsed.</b> I couldn’t verify today’s alert level; check IMD Chennai.<small>IMD bulletin via UNI, 18 Oct 2026</small></div></div>
+<div class="warn"><span class="dot"></span><div><b>Check viral flood videos before sharing.</b> Old clips, even from other countries, have been passed off as Chennai floods.<small>ETV Bharat fact check</small></div></div>
+<div class="warn"><span class="dot"></span><div><b>Very heavy rain is forecast.</b> The Chief Minister told all departments to coordinate and to inspect past flood spots.<small>Chief Minister’s review, 18 Oct 2026</small></div></div>
+</div>
+<p class="meta">Report waterlogging or get help: call <b>1913</b> (Greater Chennai Corporation).</p>
+
+<h2>Source accounts</h2>
+<div class="grid">
+<div class="card"><b>Greater Chennai Corporation</b><br><a href="https://x.com/chennaicorp" target="_blank" rel="noopener">@chennaicorp</a><br><span>Civic updates · helpline 1913</span></div>
+<div class="card"><b>Greater Chennai Traffic Police</b><br><a href="https://x.com/ChennaiTraffic" target="_blank" rel="noopener">@ChennaiTraffic</a><br><span>Diversions, closures, advisories</span></div>
+<div class="card"><b>Tamil Nadu Police</b><br><a href="https://x.com/tnpoliceoffl" target="_blank" rel="noopener">@tnpoliceoffl</a><br><span>State police advisories</span></div>
+<div class="card"><b>Independent weather account</b><br><a href="https://x.com/praddy06" target="_blank" rel="noopener">@praddy06</a><br><span>Rain nowcasts and forecasts</span></div>
+</div>
+<p class="meta">I couldn’t read posts from @praddy06 or @tnpoliceoffl, so nothing from them is quoted here.</p>
+
+<h2>Social media feeds</h2>
+<div class="grid">
+<div class="card"><b>X</b><br><a href="https://x.com/search?q=chennai%20rain&amp;f=live" target="_blank" rel="noopener">“chennai rain”, latest posts</a><br><span>Photos and videos tab: add &amp;f=media</span></div>
+<div class="card"><b>YouTube</b><br><a href="https://www.youtube.com/results?search_query=chennai+rain&amp;sp=CAI%253D" target="_blank" rel="noopener">“chennai rain”, newest uploads</a><br><span>Check the upload date before trusting</span></div>
+<div class="card"><b>Instagram</b><br><a href="https://www.instagram.com/explore/tags/chennairain/" target="_blank" rel="noopener">#chennairain</a><br><span>May need a login</span></div>
+</div>
+
+<h2>Community reports</h2>
+<div class="card" id="rep">
+<form id="f" novalidate>
+<label>Area name (required)<br><input id="area" maxlength="80" placeholder="e.g. Vyasarpadi, Stephenson Road" style="width:100%"></label><br>
+<label>Comment (required)<br><textarea id="cm" maxlength="500" rows="3" placeholder="Water depth, road open or closed, what you see" style="width:100%"></textarea></label><br>
+<label>Photo or video (optional, up to 20 MB)<br><input id="file" type="file" accept="image/*,video/*"></label><br>
+<button id="go" type="submit" style="margin-top:8px;padding:8px 16px;font-weight:700">Post report</button>
+<p id="msg" class="meta" role="status"></p>
+</form>
+<p class="meta">Reports are public to everyone with this link. Don’t post faces, number plates or home addresses.</p>
+</div>
+<div id="list" class="tl" style="margin-top:12px;border:0"></div>
+
+<h2>Timeline, latest first</h2>
+<ul class="tl">
+<li><span class="tag t-n">News</span><span class="meta">21 Oct 2026 (The News Minute)</span><br>Heavy rain since Tuesday night (20 Oct) flooded T Nagar, Velachery, Nungambakkam, Ashok Nagar, West Mambalam, Alwarpet, Kilpauk and Kolathur, and GN Chetty Road. GCC used over 100 motor pumps plus tractors and JCBs across its 15 zones. An official said some spots needed 3–4 more hours to drain.</li>
+<li><span class="tag t-w">GCC statement</span><span class="meta">21 Oct 2026, Wednesday morning (Deccan Herald)</span><br>Commissioner said Jones, Perambur and Gengu Reddy subways flooded overnight, were drained and reopened. All 420 bus-route roads open. Pumping continued at AGS Colony, Velachery. City average rain was 7.3 cm in 24 hours.</li>
+<li><span class="tag t-n">News</span><span class="meta">21 Oct 2026 (Bombay Samachar)</span><br>Schools shut in five districts. Meenambakkam got 120.3 mm and Nungambakkam 107.2 mm in the 21 hours to 5:30 AM. No major citywide inundation reported; 200 relief centres ready.</li>
+<li><span class="tag t-x">@ChennaiTraffic</span><span class="meta">21 Oct 2026, morning</span><br>Traffic diversions 7:30–9:00 AM for the Police Commemoration Day Parade at the DGP Office, Mylapore. Not flood-related, but affects Mylapore roads.</li>
+<li><span class="tag t-x">@ChennaiTraffic</span><span class="meta">Date not shown on profile; listed just after the 21 Oct post (Tamil)</span><br>Yanaikavani traffic police found and cleared a blocked stormwater drain on Yanaikavani Street during heavy rain, restoring traffic flow.</li>
+<li><span class="tag t-n">News</span><span class="meta">19 Oct 2026 (DT Next, about Sunday 18 Oct)</span><br>Vyasarpadi: Stephenson Road had near knee-deep water after overnight rain. Residents say Ganesapuram Subway floods every year and water is still pumped out manually; about 15 m of drain work is pending.</li>
+<li><span class="tag t-w">GCC statement</span><span class="meta">18 Oct 2026, 5:23 PM IST (PTI)</span><br>All 22 subways cleared of waterlogging and reopened by 6 AM Sunday. Some areas got over 30 cm of rain; no casualties or major accidents reported.</li>
+<li><span class="tag t-n">News</span><span class="meta">18 Oct 2026 (Deccan Chronicle)</span><br>Water cleared from all 35 inundated locations using motor pumps. Food given to 13,500 people. 1,189 vehicles and machines on standby, including 676 corporation pumps and 134 rented 100 HP pumps.</li>
+<li><span class="tag t-n">News</span><span class="meta">18 Oct 2026 (DT Next)</span><br>Severe waterlogging inspected at Parrys, Broadway Bus Terminus, Triplicane and Ice House. About 15,000 workers deployed; 50-member TNDRF battalion on standby at Ripon Building.</li>
+<li><span class="tag t-n">News</span><span class="meta">17 Oct 2026 (DT Next)</span><br>Teams cleared silt from catch pits and drains on Besant Road, Teynampet, a recurring waterlogging spot.</li>
+</ul>
+
+<h2>Rainfall, overnight to 5:30 AM on 21 Oct (cm)</h2>
+<div class="bars" id="bars"></div>
+<p class="meta">Sources: The News Minute and Bombay Samachar, 21 Oct 2026. Earlier peak on 18 Oct: Parrys 36 cm, Kathivakkam 34 cm.</p>
+
+<h2>Hotspots and subways</h2>
+<div class="tw"><table>
+<thead><tr><th>Place</th><th>Status in latest report</th><th>Date</th></tr></thead>
+<tbody>
+<tr><td>Jones, Perambur, Gengu Reddy subways</td><td class="st-ok">Flooded overnight; drained and reopened</td><td>21 Oct</td></tr>
+<tr><td>420 bus-route roads</td><td class="st-ok">All open</td><td>21 Oct</td></tr>
+<tr><td>T Nagar, Velachery, Nungambakkam, Ashok Nagar, West Mambalam</td><td class="st-bad">Waterlogged; pumping on</td><td>21 Oct</td></tr>
+<tr><td>Alwarpet, Kilpauk, Kolathur, GN Chetty Road</td><td class="st-bad">Waterlogged; GN Chetty Road is a repeat spot</td><td>21 Oct</td></tr>
+<tr><td>AGS Colony, Velachery</td><td class="st-bad">Pumping still on</td><td>21 Oct</td></tr>
+<tr><td>35 locations flooded earlier</td><td class="st-ok">Pumped out</td><td>18 Oct</td></tr>
+<tr><td>Stephenson Road, Vyasarpadi</td><td class="st-bad">Knee-deep water; recurring</td><td>18 Oct</td></tr>
+<tr><td>Ganesapuram Subway</td><td class="st-bad">Floods yearly; manual pumping</td><td>18 Oct</td></tr>
+<tr><td>Parrys, Broadway, Triplicane, Ice House</td><td class="st-bad">Severely waterlogged</td><td>18 Oct</td></tr>
+<tr><td>Besant Road, Teynampet</td><td class="st-bad">Vulnerable spot; drains being desilted</td><td>17 Oct</td></tr>
+</tbody></table></div>
+
+<footer>Sources: The News Minute, Deccan Herald, Bombay Samachar, DT Next, PTI via Telangana Today, Deccan Chronicle, UNI, ETV Bharat and the @ChennaiTraffic profile. Community reports are unverified. Status shown is the latest reported and may have changed since.</footer>
+</main>
+<script>
+(function(){
+var d=[["Vadapalani",13.5],["Saidapet",12.7],["Meenambakkam",12.0],["Valasaravakkam",11.3],["Nerkundram",11.0],["Nungambakkam",10.7],["Adyar",10.0],["Taramani",9.5]];
+var el=document.getElementById("bars");
+d.forEach(function(r){var row=document.createElement("div");row.className="bar";
+var a=document.createElement("span");a.textContent=r[0];var i=document.createElement("i");i.style.width=(r[1]/14*100)+"%";var b=document.createElement("b");b.textContent=r[1];
+row.append(a,i,b);el.appendChild(row);});
+var $=function(x){return document.getElementById(x)},msg=$("msg"),db=null,assets=null,uid=null;
+function say(t){msg.textContent=t}
+function show(docs){
+ var L=$("list");L.textContent="";
+ if(!docs.length){var e=document.createElement("p");e.className="meta";e.textContent="No reports yet. Be the first.";L.appendChild(e);return}
+ docs.sort(function(a,b){return b.ts-a.ts}).forEach(function(r){
+  var c=document.createElement("div");c.className="card";c.style.marginBottom="10px";
+  var h=document.createElement("b");h.textContent=r.area;
+  var m=document.createElement("div");m.className="meta";m.textContent=new Date(r.ts).toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short"});
+  var p=document.createElement("p");p.style.margin="6px 0";p.textContent=r.comment;
+  c.append(h,m,p);
+  if(r.url){var t=(r.type||"").indexOf("video")===0?"video":"img";var x=document.createElement(t);x.src=r.url;x.style.maxWidth="100%";x.style.maxHeight="320px";x.style.borderRadius="4px";if(t==="video")x.controls=true;else x.alt="Photo from "+r.area;c.appendChild(x)}
+  L.appendChild(c)});
+}
+Promise.all([claude.use("db"),claude.use("assets"),claude.use("user")]).then(function(v){
+ db=v[0];assets=v[1];
+ if(v[2]&&v[2].id){v[2].id().then(function(i){uid=i}).catch(function(){})}
+ if(!db){$("go").disabled=true;say("Reports need a signed-in viewer. Open the link in claude.ai to read or post.");return}
+ db.collection("reports").onSnapshot(function(s){show(s.docs.map(function(x){return x.data()}))},function(){say("Couldn’t load reports.")});
+}).catch(function(){say("Reports are unavailable here.")});
+$("f").addEventListener("submit",async function(ev){
+ ev.preventDefault();
+ var area=$("area").value.trim(),cm=$("cm").value.trim(),f=$("file").files[0];
+ if(!area){say("Area name is required.");$("area").focus();return}
+ if(!cm){say("A comment is required.");$("cm").focus();return}
+ if(!db){say("Posting isn’t available for this viewer.");return}
+ if(f&&!/^(image|video)\//.test(f.type)){say("Only images or videos can be uploaded.");return}
+ if(f&&f.size>20*1048576){say("File is over 20 MB.");return}
+ $("go").disabled=true;say("Posting…");
+ try{
+  var rec={area:area,comment:cm,ts:Date.now(),by:uid||""};
+  if(f){if(!assets){say("Uploads aren’t available for you; posting without the file.")}else{var u=await assets.upload(f);rec.url=u.url;rec.type=u.contentType}}
+  await db.collection("reports").add(rec);
+  $("f").reset();say("Posted.");
+ }catch(e){say("Couldn’t post: "+((e&&e.message)||"try again"))}
+ $("go").disabled=false;
+});
+$("rf").addEventListener("click",async function(){
+ var m=$("rfm");
+ if(!db){m.textContent="Reports need a signed-in viewer.";return}
+ m.textContent="Refreshing…";
+ try{var s=await db.collection("reports").get();show(s.docs.map(function(x){return x.data()}));m.textContent="Reports refreshed at "+new Date().toLocaleTimeString("en-IN",{timeStyle:"short"})+". Official data below is from 21 Oct."}
+ catch(e){m.textContent="Couldn’t refresh reports."}
+});
+$("ask").addEventListener("click",async function(){
+ var t="Refresh my Chennai waterlogging dashboard (https://claude.ai/artifact/9CEQ5mX5hhr7TvBksSS3Fo) with the latest posts, warnings, rainfall and subway status, newest first.",m=$("rfm");
+ try{await navigator.clipboard.writeText(t);m.textContent="Copied. Paste it into your Claude chat; only Claude chat can search for new data."}
+ catch(e){m.textContent="Copy this into your Claude chat: "+t}
+});
+})();
+</script>
+</body>
+</html>
