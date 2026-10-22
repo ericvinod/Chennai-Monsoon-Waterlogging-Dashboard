@@ -63,7 +63,7 @@ footer{margin-top:28px;color:var(--mute);font-size:.85rem}
 <p class="sub">Send field reports by WhatsApp; official feeds are linked below. Last compiled 22 October 2026.</p>
 <div class="card" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px">
 <button id="rf" type="button" style="padding:8px 14px;font-weight:700">Reload page</button>
-<button id="ask" type="button" style="padding:8px 14px;font-weight:700">Request full data refresh</button>
+<button id="ask" type="button" style="padding:8px 14px;font-weight:700">Request full data refresh (WhatsApp to Eric)</button>
 <span id="rfm" class="meta" role="status">Official data below was last compiled 22 Oct.</span>
 </div>
 <p class="note"><b>Not a live feed:</b> the data below is typed in by hand from news and official accounts. X, Instagram and YouTube feeds open in a new tab. The timeline below is a dated snapshot (latest verified: 21 Oct).</p>
@@ -166,8 +166,7 @@ $("f").addEventListener("submit",function(ev){
 $("rf").addEventListener("click",function(){location.reload()});
 $("ask").addEventListener("click",async function(){
  var t="Refresh my Chennai waterlogging dashboard ("+location.href+") with the latest posts, warnings, rainfall and subway status, newest first.",m=$("rfm");
- try{await navigator.clipboard.writeText(t);m.textContent="Copied. Paste it into your Claude chat; only Claude chat can search for new data."}
- catch(e){m.textContent="Copy this into your Claude chat: "+t}
+ window.open("https://wa.me/919845682483?text="+encodeURIComponent(t),"_blank","noopener");m.textContent="Opening WhatsApp to message Eric (+919845682483).";
 });
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(function(){})}
 })();
